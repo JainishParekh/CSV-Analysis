@@ -1,0 +1,26 @@
+{% load static %}
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% tailwind_css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+
+    <title>
+      {% block title %}
+        CSV Analysis
+      {% endblock %}
+    </title>
+  </head>
+  <body class="bg-blue-950 font-sans text-white p-4">
+    <h1 class="bg-orange-600 p-4 font-semibold text-[32px] mb-[8px] rounded-xl text-center">
+        CSV Analysier
+    </h1>
+    {% block content %}
+        
+    {% endblock %}
+  </body>
+</html>

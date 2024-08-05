@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  CSV Analysis Results
+{% endblock %}
+
+{% block content %}
+  <div class="container mx-auto">
+    <h1 class="text-2xl font-bold mb-6">CSV Analysis Results</h1>
+    <div class="bg-gray-700 flex justify-center items-center flex-col p-6 rounded shadow-md mb-6">
+      <h2 class="text-xl font-bold mb-4">First Few Rows of Data</h2>
+      <div class="overflow-x-auto">{{ data|safe }}</div>
+    </div>
+    <div class="bg-gray-700 p-6 flex justify-center items-center flex-col rounded shadow-md mb-6">
+      <h2 class="text-xl font-bold mb-4">Summary Statistics</h2>
+      <div class="overflow-x-auto">{{ summary_stats|safe }}</div>
+    </div>
+    <div class="bg-gray-700 p-6 flex justify-center items-center flex-col rounded shadow-md mb-6">
+      <h2 class="text-xl font-bold mb-4">Missing Values</h2>
+      <div class="overflow-x-auto">{{ missing_values|safe }}</div>
+    </div>
+    <div class="bg-gray-700 p-2 rounded shadow-md mb-4 flex flex-col justify-center items-center w-full">
+      <h2 class="text-xl font-bold mb-4">Data Visualization</h2>
+      <img src="data:image/png;base64,{{ plot }}" class="w-[60%]" />
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+# Python Bytecode
+*.py[cod]
+__pycache__/
+
+# Django-specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Environment and Virtual Environment
+.env
+venv/
+ENV/
+env/
+*.env
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+*.pkl
+*.egg
+*.egg-info
+dist/
+build/
